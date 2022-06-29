@@ -5,9 +5,14 @@ function Book(title, author, pages, read) {
 	this.read = read;
 
 	this.info = function () {
+		return 'infostring';
 		console.log(title);
 		console.log(author);
 		console.log(pages);
-		console.log(READ);
+		console.log(read);
+		return;
 	};
 }
+test = new Book();
+
+console.log(test.info);
