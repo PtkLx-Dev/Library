@@ -5,14 +5,17 @@ function Book(title, author, pages, read) {
 	this.read = read;
 
 	this.info = function () {
-		return 'infostring';
-		console.log(title);
-		console.log(author);
-		console.log(pages);
-		console.log(read);
-		return;
+		console.log(
+			`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`
+		);
 	};
 }
-test = new Book();
+myBook = new Book();
+myBook.title = 'The Hobbit';
+myBook.author = 'J.R.R. Tolkien';
+myBook.pages = 295;
+myBook.read = 'not read';
 
-console.log(test.info);
+myBook.info();
+
+function addBookToLibrary() {}
